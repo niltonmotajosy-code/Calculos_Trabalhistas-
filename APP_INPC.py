@@ -12987,6 +12987,11 @@ elif opcao_menu == "💵 Juros":
             wb.save(caminho_arquivo)
             st.info(f"📂 Arquivo salvo em: {caminho_arquivo}")
 
+df.to_excel("JUROS_SIMPLES.xlsx", index=False)
+with open("JUROS_SIMPLES.xlsx", "rb") as file:
+    st.download_button("📥 Baixar resultado em Excel", file, "JUROS_SIMPLES.xlsx")
+
+
 
 
 
